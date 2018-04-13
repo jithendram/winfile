@@ -1,7 +1,8 @@
---- 
+---
+- name: Region
+  region: "{{ region }}"
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
-    region: "{{ region }}"
     path: C:\Users\hii.txt
     state: touch
 - name: Directory
