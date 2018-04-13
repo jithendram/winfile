@@ -1,7 +1,7 @@
 ---
 - name: Environment
   ec2:
-  region: "{{ region }}"
+    region: "{{ region }}"
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
     path: C:\Users\hii.txt
