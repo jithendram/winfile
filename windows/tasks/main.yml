@@ -1,5 +1,6 @@
 ---
-- win_region:
+- name: region
+  win_region:
     format: us-west-2
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
