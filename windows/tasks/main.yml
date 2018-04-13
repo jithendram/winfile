@@ -1,9 +1,11 @@
 ---
-- name: Touch a file (creates if not present, updates modification time if present)
-  win_file:
-     path: C:\Users\cat
-     state: touch
-- name: Directory
-  win_file:
-     path: C:\Users\Pig
-     state: directory                       
+- hosts: localhost
+  tasks:
+  - name: Touch a file (creates if not present, updates modification time if present)
+    win_file:
+       path: C:\Users\cat
+       state: touch
+  - name: Directory
+    win_file:
+       path: C:\Users\Pig
+       state: directory                       
