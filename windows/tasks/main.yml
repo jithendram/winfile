@@ -2,6 +2,7 @@
 - ec2_remote_facts:
     filters:
       instance-id: i-0b2fd299fcd71c1cd
+      region: "{{ region }}"
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
     path: C:\Users\hii.txt
