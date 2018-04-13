@@ -1,10 +1,4 @@
 ---
-- name: Set an environment variable for all users
-  win_environment:
-    state: present
-    name: access
-    value: secret
-    level: machine
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
     path: C:\Users\hari.txt
