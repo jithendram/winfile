@@ -1,9 +1,17 @@
 ---
-- name: Touch a file (creates if not present, updates modification time if present)
-  win_file:
-    path: C:\Users\hari.txt
-    state: touch
-- name: Directory
-  win_file:
-    path: C:\Users\hari
-    state: directory
+- environment:
+    AWS_ACCESS_KEY_ID: {{ access }}
+    AWS_SECRET_ACCESS_KEY: {{ secret }}
+  gather_facts: no
+  vars:
+    region: {{ region }}
+  tasks:
+    - name: Touch a file (creates if not present, updates modification time if present)
+      win_file:
+        path: C:\Users\cat
+        state: touch
+    - name: Directory
+      win_file:
+        path: C:\Users\Pig
+        state: directory
+~                         
