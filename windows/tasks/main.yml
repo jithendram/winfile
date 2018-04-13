@@ -1,0 +1,16 @@
+--- 
+- name: Environment
+  ec2:
+    aws_access_key: "{{ access }}"
+    aws_secret_key: "{{ secret }}" 
+    region: "{{ region }}"
+
+- name: Touch a file (creates if not present, updates modification time if present)
+  win_file:
+    path: C:\Users\hari.txt
+    state: touch
+- name: Directory
+  win_file:
+    path: C:\Users\hari
+    state: directory
+
