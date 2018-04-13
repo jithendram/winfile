@@ -13,5 +13,4 @@
     - name: Directory
       win_file:
         path: C:\Users\Pig
-        state: directory
-~                         
+        state: directory                       
