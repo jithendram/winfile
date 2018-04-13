@@ -1,5 +1,5 @@
 ---
-- name: Region
+- ec2:
   region: "{{ region }}"
 - name: Touch a file (creates if not present, updates modification time if present)
   win_file:
